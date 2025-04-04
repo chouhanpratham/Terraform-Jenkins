@@ -39,7 +39,7 @@ pipeline {
                 withCredentials([azureServicePrincipal(credentialsId: AZURE_CREDENTIALS_ID)]) {
                     sh "az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID"
                     sh "az account set --subscription $AZURE_SUBSCRIPTION_ID"
-                    az webapp deploy --resource-group rg-jenkins --name webapijenkinspratham22025 --src-path $WORKSPACE/webapi/webapi.zip --type zip
+                    sh "az webapp deploy --resource-group rg-jenkins --name webapijenkinspratham22025 --src-path $WORKSPACE/webapi/webapi.zip --type zip"
                 }
             }
         }
