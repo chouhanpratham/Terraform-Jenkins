@@ -18,5 +18,5 @@ variable "asp_name" {
 variable "as_name" {
   description = "Name of the App Service Plan"
   type        = string
-  default     = "webapijenkinspratham2222225"
+  default     = "webapijenkinspratham22025"
 }
