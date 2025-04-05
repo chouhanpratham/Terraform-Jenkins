@@ -7,7 +7,13 @@ pipeline {
         APP_SERVICE_NAME = 'webapijenkinspratham22025'
     }
 
+    
     stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/chouhanpratham/Python-Jenkins.git'
+            }
+        }
         stage('Terraform Init') {
             steps {
                 dir('terraform') {
